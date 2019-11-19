@@ -5,14 +5,13 @@ exports.__esModule = true;
 var fs_1 = require("fs");
 function parseSync(file) {
     var strings = {};
-    var read = fs_1.readFileSync(file, "utf8");
-    if (!read)
-        throw new Error(file + " could not be read.");
-    if (!file.endsWith(".strl"))
-        return;
+    if (!file.endsWith(".strl") ||
+        !file.endsWith(".strl/") ||
+        !file.endsWith(".strl\\"))
+        throw new Error("The file provided does not have the .strl file extension. This error was thrown for security.");
     var fileCont = fs_1.readFileSync("" + file, "utf8");
     if (!fileCont)
-        return;
+        throw new Error(file + " could not be read.");
     fileCont = fileCont.split("\n");
     fileCont.forEach(function (line) {
         if (line.startsWith("#"))
@@ -31,7 +30,7 @@ function parseFolderSync(folder) {
         throw new Error(folder + " could not be read.");
     dirCont.forEach(function (file) {
         var parsed = parseSync(folder + "/" + file);
-        return strings[file.replace(".strl", "")] = parsed;
+        return (strings[file.replace(".strl", "")] = parsed);
     });
     return strings;
 }
@@ -47,7 +46,7 @@ var Reader = /** @class */ (function () {
         this.load();
     }
     Reader.prototype.load = function () {
-        return this.strings = parseFolderSync(this.config.folder);
+        return (this.strings = parseFolderSync(this.config.folder));
     };
     Reader.prototype.get = function (locale, string) {
         if (!locale || !string)
