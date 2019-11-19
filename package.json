@@ -1,0 +1,15 @@
+{
+  "name": "strilab",
+  "version": "1.0.2",
+  "description": "A module made to make localisation of apps easier.",
+  "main": "index.js",
+  "keywords": [
+    "localisation"
+  ],
+  "author": "Chiphyr",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^12.12.11"
+  }
+}
