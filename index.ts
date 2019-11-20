@@ -1,5 +1,5 @@
 // This code is part of Strilab, which is licensed under the MIT License.
-// Copyright (c) 2019 Chiphyr <alexsssthereal@yahoo.com>
+// Copyright (c) 2019 Chiphyr <alexmcp@protonmail.com>
 
 import { readFileSync, readdirSync } from "fs";
 
