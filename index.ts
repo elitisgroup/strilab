@@ -1,5 +1,7 @@
+//ELEDIT:TypeScript
+
 // This code is part of Strilab, which is licensed under the MIT License.
-// Copyright (c) 2019 Chiphyr <alexmcp@protonmail.com>
+// Copyright (c) 2019 Chiphyr <alexeek@protonmail.com>
 
 import { readFileSync, readdirSync } from "fs";
 
@@ -11,8 +13,8 @@ export function parseSync(file: string): object {
   const strings: object = {};
 
   if (
-    !file.endsWith(".strl") ||
-    !file.endsWith(".strl/") ||
+    !file.endsWith(".strl") &&
+    !file.endsWith(".strl/") &&
     !file.endsWith(".strl\\")
   )
     throw new Error(

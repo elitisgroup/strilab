@@ -1,12 +1,13 @@
 "use strict";
-// This code is part of Strilab, which is licensed under the MIT License.
-// Copyright (c) 2019 Chiphyr <alexmcp@protonmail.com>
+//ELEDIT:TypeScript
 exports.__esModule = true;
+// This code is part of Strilab, which is licensed under the MIT License.
+// Copyright (c) 2019 Chiphyr <alexeek@protonmail.com>
 var fs_1 = require("fs");
 function parseSync(file) {
     var strings = {};
-    if (!file.endsWith(".strl") ||
-        !file.endsWith(".strl/") ||
+    if (!file.endsWith(".strl") &&
+        !file.endsWith(".strl/") &&
         !file.endsWith(".strl\\"))
         throw new Error("The file provided does not have the .strl file extension. This error was thrown for security.");
     var fileCont = fs_1.readFileSync("" + file, "utf8");
