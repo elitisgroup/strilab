@@ -70,7 +70,7 @@ export class Reader {
 
   get(locale: string, string: string): object {
     if (!locale || !string)
-      throw new Error("Locale [1] and string [2] must both be passed.");
+      throw new Error("Locale[0](string) and string[1](string) must both be passed.");
     return this.strings[locale][string] || null;
   }
 }
