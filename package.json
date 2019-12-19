@@ -1,6 +1,6 @@
 {
   "name": "strilab",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A module made to make localisation of apps easier.",
   "main": "index.js",
   "keywords": [
