@@ -1,5 +1,3 @@
-//ELEDIT:TypeScript
-
 // This code is part of Strilab, which is licensed under the MIT License.
 // Copyright (c) 2019 Chiphyr <alexeek@protonmail.com>
 

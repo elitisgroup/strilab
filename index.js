@@ -1,8 +1,7 @@
 "use strict";
-//ELEDIT:TypeScript
-exports.__esModule = true;
 // This code is part of Strilab, which is licensed under the MIT License.
 // Copyright (c) 2019 Chiphyr <alexeek@protonmail.com>
+exports.__esModule = true;
 var fs_1 = require("fs");
 function parseSync(file) {
     var strings = {};
